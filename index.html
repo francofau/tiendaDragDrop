@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Tienda Drag&Drop</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <!-- Estilos propios -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand text-white" href="#!">Verdulería Drag&Drop</a>                
+                </div>
+            </nav>        
+          
+            <div class="container fluid mt-3"></div>
+                <div class="row">
+                    <!--PRODUCTOS: Indico el espaciado entre filas y columnas (gx)además de la disposición según el tamaño -->
+                    <div class="col-9 row gx-5 gx-lg-2 gx-md-1 gx-1 row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-md-2 row-cols-xl-3">
+                        <!-- PRODUCTO 1 -->
+                        <div id="producto1" >
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/patatas.jpg" alt="patatas" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Patatas</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTO 2 -->
+                        <div id="producto2">                       
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/zanahoria.jpg" alt="zanahoria" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Zanahorias</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTO 3 -->
+                        <div id="producto3">        
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/tomates.jpg" alt="tomates" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Tomates</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTO 4 -->    
+                        <div id="producto4"> 
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/cebollas.jpg" alt="cebollas" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Cebollas</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTO 5 -->
+                        <div id="producto5"> 
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/calabacin.jpeg" alt="calabacin" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Calabacín</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTO 6 -->
+                        <div id="producto5"> 
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <!-- Product image-->
+                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/pimRojo.jpg" alt="pimiento" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Pimientos</h5>
+                                            €2
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>               
+                    
+                    <div class="col-3 row-cols-sm-1 row-cols-3 row-cols-md-1 row-cols-xl-1">
+                    <!-- Carrito -->
+                        <div class="col mb-5">
+                            <div class="card">
+                                <div id="carrito">
+                                    <img ondrop="drop(event)" ondragover="allowDrop(event)" class="card-img-top" src="img/carrito.jpg" alt="carrito" />
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder">Carrito</h5>
+                                            <div class="lista">
+                                                AQUÍ VA LA LISTA
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Total</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div><!-- fin del contenedor PRODUCTOS+CARRITO -->
+            </div>
+        <footer class="py-3 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white"></p></div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

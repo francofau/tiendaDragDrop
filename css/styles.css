@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+.card{
+    cursor: move;
+}
+
+#carrito{
+    cursor: default;
+}
