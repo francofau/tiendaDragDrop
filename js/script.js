@@ -37,10 +37,14 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   console.log(data);
 
+  // Crear las tablas indicadoras
+  var indicadores = document.createElement("tr");
+  var tablasIndicadores = "<th>Producto</th><th>Precio</th><th>Unidades</th>";
+  indicadores.appendChild(tablasIndicadores);
+
   // Generador de la Tabla del Carrito 
-  
-  
   for (let producto of productos) {
+    tabla.appendChild(indicadores);
     var tr = document.createElement("tr");
     var ifExistData = document.querySelector(`#tr${producto[0]}`);
     if (producto[0] == data) {
