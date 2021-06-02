@@ -1,55 +1,63 @@
+// Array de productos
 productos = [
-  ["Tomates", 2, 0],
-  ["Patatas", 2, 0],
-  ["Zanahorias", 2, 0],
-  ["Tomates", 2, 0],
-  ["Cebollas", 2, 0],
-  ["Calabacín", 2, 0]
+  ["Patatas", 2, 1],
+  ["Zanahorias", 2, 1],
+  ["Tomates", 2, 1],
+  ["Cebollas", 2, 1],
+  ["Calabacín", 2, 1],
+  ["Pimientos", 2, 1]
 ];
 
+// Reacciones Botones
+var addToCartButtons = document.querySelectorAll(".addCarrito");
+addToCartButtons.forEach((addToCart) => {
+  addToCart.addEventListener("click", () => {
+  console.log("click");
+  });
+});
+
+//Creacion de tabla para el carrito
+var tabla = document.createElement("table");
+document.querySelector("#lista").appendChild(tabla);
 
 
+// Permiso para Drag
 function allowDrop(ev) {
     ev.preventDefault();
-  }
-  
-  function drag(ev) {
+}
+
+// Evento Drag
+function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
-  }
+}
 
-  var listaPorDefecto = document.querySelector("#lista");
-  var lista = document.createElement("ul")
-  listaPorDefecto.appendChild(lista);
+// Evento Drop
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  console.log(data);
+
+  // Generador de la Tabla del Carrito 
   
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(data);
-
-    // Reacciones Botones
-    var addToCartButtons = document.querySelectorAll(".addCarrito");
-    addToCartButtons.forEach((addToCart) => {
-      addToCart.addEventListener("click", () => {
-        console.log("click");
-      });
-    });
-    
-    switch (data) {
-      case "patata": {
-        var li = document.createElement("li");
-        li.innerHTML = `${productos[1][0]} &nbsp; &nbsp; &nbsp; &nbsp; <span id="precio" type="number">${productos[1][1]}€</span> &nbsp; <span id="unidades" type="number">${productos[1][2]}</span> &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-danger">X</button>`;
-        lista.appendChild(li);
-      } break;
-      case "tomates": {
-        var li = document.createElement("li");
-        li.innerHTML = `${productos[0][0]} &nbsp; &nbsp; &nbsp; &nbsp; <span id="precio" type="number">${productos[0][1]}€</span> &nbsp; <span id="unidades" type="number">${productos[0][2]}</span> &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-danger">X</button>`;
-        lista.appendChild(li);
+  
+  for (let producto of productos) {
+    var tr = document.createElement("tr");
+    var ifExistData = document.querySelector(`#tr${producto[0]}`);
+    if (producto[0] == data) {
+      if (ifExistData) {
+        ifExistData.innerHTML = `<td>${producto[0]}</td><td>${producto[1]}€</td><td>${producto[2] += 1}</td><td><button id="deleteItem" type="button" class="btn btn-danger">X</button></td>`;
+      } else {
+        tr.id = `tr${producto[0]}`;
+        tr.innerHTML = `<td>${producto[0]}</td><td>${producto[1]}€</td><td>${producto[2]}</td><td><button id="deleteItem" type="button" class="btn btn-danger">X</button></td>`;
+        tabla.appendChild(tr);
       }
-
-      default:
-        break;
     }
+  }
+/*
+  var deleteItem = document.querySelector("#deleteItem");
+  deleteItem.addEventListener("click", () => {
+    console.log(`deleted item ${data}`)
+    tabla.remove(tr);
+});
+*/
 };
-    
-
-
