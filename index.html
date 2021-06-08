@@ -10,6 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <!-- Estilos propios -->
         <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     </head>
     <body>
             <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -26,15 +27,15 @@
                         <div id="producto1" >
                             <div class="col mb-5">
                                 <div class="card h-100">
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/patatas.jpg" alt="patatas" />
+                                    <img id="Patatas" draggable="true" ondragstart="drag(event)" class="item card-img-top p-3" src="img/patatas.jpg" alt="patatas" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Patatas</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Patatas</h5>
+                                            <span class="item-price">€2</span> 
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                        <div class="text-center"><a id="addPatatas" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -43,15 +44,15 @@
                         <div id="producto2">                       
                             <div class="col mb-5">
                                 <div class="card h-100">
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/zanahoria.jpg" alt="zanahoria" />
+                                    <img id="Zanahorias" draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/zanahoria.jpg" alt="zanahoria" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Zanahorias</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Zanahorias</h5>
+                                            <span id="item-price">€2</span>
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                        <div class="text-center"><a id="addZanahorias" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -60,15 +61,19 @@
                         <div id="producto3">        
                             <div class="col mb-5">
                                 <div class="card h-100">
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/tomates.jpg" alt="tomates" />
+                                    <img id="Tomates" draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/tomates.jpg" alt="tomates" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Tomates</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Tomates</h5>
+                                            <span id="item-price">€2</span> 
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+<<<<<<< HEAD
+                                        <div class="text-center"><a class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+=======
+                                        <div class="text-center"><a id="addTomates" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+>>>>>>> 1eb8e47c3e4c955098fd634de8e313a56532706b
                                     </div>
                                 </div>
                             </div>
@@ -77,15 +82,19 @@
                         <div id="producto4"> 
                             <div class="col mb-5">
                                 <div class="card h-100">
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/cebollas.jpg" alt="cebollas" />
+                                    <img id="Cebollas" draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/cebollas.jpg" alt="cebollas" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Cebollas</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Cebollas</h5>
+                                            <span id="item-price">€2</span>
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+<<<<<<< HEAD
+                                        <div class="text-center"><a class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+=======
+                                        <div class="text-center"><a id="addCebollas" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+>>>>>>> 1eb8e47c3e4c955098fd634de8e313a56532706b
                                     </div>
                                 </div>
                             </div>
@@ -94,15 +103,19 @@
                         <div id="producto5"> 
                             <div class="col mb-5">
                                 <div class="card h-100">
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/calabacin.jpeg" alt="calabacin" />
+                                    <img id="Calabacín" draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/calabacin.jpeg" alt="calabacin" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Calabacín</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Calabacín</h5>
+                                            <span id="item-price">€2</span>
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+<<<<<<< HEAD
+                                        <div class="text-center"><a class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+=======
+                                        <div class="text-center"><a id="addCalabacín" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+>>>>>>> 1eb8e47c3e4c955098fd634de8e313a56532706b
                                     </div>
                                 </div>
                             </div>
@@ -112,15 +125,19 @@
                             <div class="col mb-5">
                                 <div class="card h-100">
                                     <!-- Product image-->
-                                    <img draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/pimRojo.jpg" alt="pimiento" />
+                                    <img id="Pimientos" draggable="true" ondragstart="drag(event)" class="card-img-top p-3" src="img/pimRojo.jpg" alt="pimiento" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Pimientos</h5>
-                                            €2
+                                            <h5 class="item-title fw-bolder">Pimientos</h5>
+                                            <span id="item-price">€2</span>
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+<<<<<<< HEAD
+                                        <div class="text-center"><a class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+=======
+                                        <div class="text-center"><a id="addPimientos" class="addCarrito btn btn-outline-dark mt-auto">Agregar al Carrito</a></div>
+>>>>>>> 1eb8e47c3e4c955098fd634de8e313a56532706b
                                     </div>
                                 </div>
                             </div>
@@ -135,14 +152,13 @@
                                     <img ondrop="drop(event)" ondragover="allowDrop(event)" class="card-img-top" src="img/carrito.jpg" alt="carrito" />
                                     <div class="card-body p-4">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder">Carrito</h5>
-                                            <div class="lista">
-                                                AQUÍ VA LA LISTA
+                                            <h5 class="fw-bolder mb-4">Carrito</h5>
+                                            <div id="lista">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">Total</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-primary mt-auto">Total</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -153,6 +169,6 @@
         <footer class="py-3 bg-dark">
             <div class="container"><p class="m-0 text-center text-white"></p></div>
         </footer>
-        <script src="js/scripts.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
